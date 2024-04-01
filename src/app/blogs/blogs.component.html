@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Blogs</h1>
+    @for(item of blogDetails;track item.id){
+    <div class="cardddd">
+       <div style="width: 100%;height:auto;display: flex;font-weight: 900;"> <h5 style="width: 190px;">Author Name </h5><h6>: {{item.name}}</h6></div>
+       <div style="width: 100%;height:auto;display: flex;"> <h5 style="width: 190px;">Blog Title </h5><h6>: {{item.title}}</h6></div>
+       <div style="width: 100%;height:auto;display: flex;flex-direction: column;"> 
+        <h5>Blog :</h5><p>{{item.blog}}</p></div>
+        <button class="btn" (click)="view(item)">View Author Details</button>
+    </div>}
+    
+</div>
